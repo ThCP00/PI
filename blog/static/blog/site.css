@@ -1,0 +1,58 @@
+.navbar {
+    background-color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 8px 5px 8px 5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(0, 0, 0);
+}
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0);
+}
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+    background-color: rgb(0, 0, 0);
+}
+.body-content {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    align-self:center;
+    align-content: center;
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.light{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.navbar-right{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: right;
+    align-items: right;
+    align-self:right;
+    align-content: right;
+}
+#theme-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  #theme-btn:hover {
+    color: #ffffff;
+  }
+  .changeTheme {
+    background-color: rgb(255, 255, 255);
+    font: rgb(0, 0, 0);
+  }
