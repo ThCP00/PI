@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from blog import views
 
 # Create your views here.
 def cadastrar(request):
@@ -21,7 +22,7 @@ def realizar_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return render(request, "blog/home.html")
         else:
             return render(request, 'login.html', {'error': 'Usuário ou senha inválidos.'})
     else:
@@ -29,4 +30,4 @@ def realizar_login(request):
 
 def sair(request):
     logout(request)
-    return redirect("home")
+    return render(request, "blog/home.html")
