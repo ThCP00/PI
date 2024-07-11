@@ -111,3 +111,28 @@
 .h1{
     margin: 30px;
 }
+
+.form-group{
+    margin: 30px;
+    text-align: center;
+    align-items: center;
+    align-self:center;
+    align-content: center;
+}
+
+.form-g{
+    margin: 30px;
+    text-align: left;
+    align-items: left;
+    align-self:left;
+    align-content: left;
+}
+
+.form-control{
+    width: 400px;
+}
+
+.form-c{
+    width: 400px;
+    height: 200px;
+}
