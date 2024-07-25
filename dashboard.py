@@ -9,7 +9,7 @@ st.set_page_config(
 df = pd.read_excel("DB_FIRE.xlsx")
     
 st.sidebar.header("Filtros")
-ano = st.sidebar.slider(
+ano = st.sidebar.multiselect(
     "Selecione o ano",
     options=df["Ano"].unique(),
     default=df["Ano"].unique()
