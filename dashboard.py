@@ -11,19 +11,8 @@ df = pd.read_excel("DB_FIRE.xlsx")
 st.sidebar.header("Filtros")
 anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"])
 
-ano = st.sidebar.multiselect(
-    "Selecione o ano",
-    options=df["Ano"].unique(),
-    default=df["Ano"].unique()
-)
-mes = st.sidebar.multiselect(
-    "Selecione o mes",
-    options=df["Mês"].unique(),
-    default=df["Mês"].unique()
-)
-
 df_selection = df.query(
-    "Ano == @anos & Mês == @mes"
+    "Ano == @anos"
 )
 df = df_selection
 with st.expander("Grafico"):
