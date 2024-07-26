@@ -16,6 +16,8 @@ df_selection = df.query(
 )
 df = df_selection
 
-st.markdown('metricas')
+st.map(data=df, latitude=Latitude, longitude=Longitude, color=red, size=None, zoom=None, use_container_width=True)
+
+
 
 st.dataframe(df_selection)
