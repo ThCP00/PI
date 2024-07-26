@@ -5,11 +5,11 @@ st.set_page_config(
     layout="wide",
     page_icon=":bar_chart: "
 )
-
+index = options.index("OpenTopoMap")
 df = pd.read_excel("DB_FIRE.xlsx")
 anos = [2020, 2021, 2022, 2023, 2024]
 st.sidebar.header("Filtros")
-year = st.sidebar.selectbox("Selecione o ano:", df["Ano"])
+year = st.sidebar.selectbox("Selecione o ano:", df["Ano"], index)
 
 df_selection = df.query(
     "year == Ano"
