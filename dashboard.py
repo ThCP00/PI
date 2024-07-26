@@ -24,7 +24,7 @@ mes = st.sidebar.multiselect(
 )
 
 df_selection = df.query(
-    "Ano == @ano & Mês == @mes"
+    "Ano == @ano & Mês == @mes & Anos == @anos"
 )
 df = df_selection
 with st.expander("Grafico"):
