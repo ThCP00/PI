@@ -12,7 +12,7 @@ st.sidebar.header("Filtros")
 year = st.sidebar.selectbox("Selecione o ano:", anos)
 
 df_selection = df.query(
-    "year == ano"
+    "year == Ano"
 )
 df = df_selection
 with st.expander("Grafico"):
