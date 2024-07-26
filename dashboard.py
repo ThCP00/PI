@@ -9,7 +9,7 @@ st.set_page_config(
 
 df = pd.read_excel("DB_FIRE.xlsx")
 st.sidebar.header("Filtros")
-
+anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"])
 
 ano = st.sidebar.multiselect(
     "Selecione o ano",
@@ -23,7 +23,7 @@ mes = st.sidebar.multiselect(
 )
 
 df_selection = df.query(
-    "Ano == @ano & Mês == @mes"
+    "Ano == @anos & Mês == @mes"
 )
 df = df_selection
 with st.expander("Grafico"):
