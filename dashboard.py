@@ -7,8 +7,8 @@ st.set_page_config(
     page_icon=":bar_chart: "
 )
 df = pd.read_excel("DB_FIRE.xlsx")
-latitude = df["latitude"]
-lontidude = df["longitude"]
+lat = df["latitude"]
+long = df["longitude"]
 
 st.sidebar.header("Filtros")
 anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
@@ -16,7 +16,7 @@ mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
     "Ano == @anos & Mês == @mes"
 )
-st.map(data=df, latitude=latitude, longitude=longitude, color=red, use_container_width=True)
+st.map(data=df, latitude=lat, longitude=long, color=red, use_container_width=True)
 df = df_selection
 
 
