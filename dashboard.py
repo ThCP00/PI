@@ -18,7 +18,7 @@ df_selection = df.query(
 )
 df = df_selection
 
-st.map(df)
+st.map(pd.read_excel("DB_FIRE.xlsx"))
 
 
 st.dataframe(df_selection)
