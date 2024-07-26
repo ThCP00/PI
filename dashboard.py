@@ -16,7 +16,7 @@ df_selection = df.query(
 )
 df = df_selection
 
-st.map(data=df, latitude=Latitude, longitude=Longitude, color=red, size=None, zoom=None, use_container_width=True)
+st.map(df_selection)
 
 
 
