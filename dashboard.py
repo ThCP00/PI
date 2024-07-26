@@ -7,9 +7,12 @@ st.set_page_config(
 )
 
 df = pd.read_excel("DB_FIRE.xlsx")
-    
+anos = [2020, 2021, 2022, 2023, 2024]
 st.sidebar.header("Filtros")
-ano = st.sidebar.multiselect(
+year = st.sidebar.selectbox("Selecione o ano:", anos)
+
+
+ano = st.sidebar.slider(
     "Selecione o ano",
     options=df["Ano"].unique(),
     default=df["Ano"].unique()
