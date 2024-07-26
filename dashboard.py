@@ -19,6 +19,6 @@ df_selection = df.query(
 df = df_selection
 
 st.map(pd.read_excel("DB_FIRE.xlsx"))
-st.map(data=pd.read_excel("DB_FIRE.xlsx"), latitude=latitude, longitude=longitude, color=red, use_container_width=True)
+st.map(data=df, latitude=none, longitude=none, color=red, use_container_width=True)
 
 st.dataframe(df_selection)
