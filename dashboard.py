@@ -9,7 +9,7 @@ st.set_page_config(
 df = pd.read_excel("DB_FIRE.xlsx")
 anos = [2020, 2021, 2022, 2023, 2024]
 st.sidebar.header("Filtros")
-year = st.sidebar.selectbox("Selecione o ano:", anos)
+year = st.sidebar.selectbox("Selecione o ano:", df["Ano"])
 
 df_selection = df.query(
     "year == Ano"
