@@ -16,5 +16,10 @@ df_selection = df.query(
 )
 df = df_selection
 
+st.markdown('metricas')
+
+col1, col2= st.columns(2)
+col1.metric("Dias Sem Chuva", df["DiaSemChuva"])
+col2.metric("Risco de Fogo", df["RiscoFogo"])
 
 st.dataframe(df_selection)
