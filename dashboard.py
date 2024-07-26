@@ -15,7 +15,6 @@ df_selection = df.query(
     "Ano == @anos"
 )
 df = df_selection
-with st.expander("Grafico"):
-    st.line_chart(df, x="Ano", y="Mês")
+
 
 st.dataframe(df_selection)
