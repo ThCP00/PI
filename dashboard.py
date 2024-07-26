@@ -7,8 +7,8 @@ st.set_page_config(
     page_icon=":bar_chart: "
 )
 df = pd.read_excel("DB_FIRE.xlsx")
-latitude = df["Latitude"]
-lontidude = df["Longitude"]
+latitude = df["latitude"]
+lontidude = df["longitude"]
 
 st.sidebar.header("Filtros")
 anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
