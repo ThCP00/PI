@@ -7,8 +7,8 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 m = leafmap.Map()
-data = "https://raw.githubusercontent.com/ThCP00/PI/main/DB_FIRE_MIN.csv"
-df = pd.read_csv(data)
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DB_FI.xlsx"
+df = pd.read_excel(data)
 m.add_points_from_xy(df, x="longitude", y="latitude")
 
 m.to_streamlit(height=700)
