@@ -11,8 +11,8 @@ cidade = "https://raw.githubusercontent.com/ThCP00/PI/main/teste%20db1.csv"
 
 m.add_points_from_xy(
     cidade,
-    x="longitude",
-    y="latitude",
+    x="latitude",
+    y="longitude",
     icon_names=["gear", "map", "leaf", "globe"],
     spin=True,
     add_legend=True,
