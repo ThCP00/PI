@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 
 
 m = leafmap.Map(center=[40, -100], zoom=4)
-cities = "https://github.com/ThCP00/PI/blob/main/DB_FIRE.xlsx"
+cities = "https://github.com/ThCP00/PI/blob/9f2094a456fa7223c7d66ea6cbbb48bf0d155855/DB_FIRE.csv"
 regions = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_regions.geojson"
 
 m.add_geojson(regions, layer_name="US Regions")
