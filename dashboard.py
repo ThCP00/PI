@@ -16,7 +16,6 @@ mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
     "Ano == @anos & Mês == @mes"
 )
-st.map(data=df, latitude=lat, longitude=long)
 df = df_selection
 
 
