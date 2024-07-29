@@ -7,10 +7,10 @@ st.set_page_config(layout="wide")
 
 
 m = leafmap.Map(center=[40, -100], zoom=4)
-cities = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
+cidade = "https://raw.githubusercontent.com/ThCP00/PI/main/teste%20db1.csv"
 
 m.add_points_from_xy(
-    cities,
+    cidade,
     x="longitude",
     y="latitude",
     icon_names=["gear", "map", "leaf", "globe"],
