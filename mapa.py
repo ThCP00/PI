@@ -11,8 +11,8 @@ cities = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/
 
 m.add_points_from_xy(
     cities,
-    x="latitude",
-    y="longitude",
+    x="longitude",
+    y="latitude",
     icon_names=["gear", "map", "leaf", "globe"],
     spin=True,
     add_legend=True,
