@@ -20,6 +20,7 @@ with st.echo():
         icon_names=["gear", "map", "leaf", "globe"],
         spin=True,
         add_legend=True,
+        m.to_streamlit(height=700)
         )
 
-m.to_streamlit(height=700)
+
