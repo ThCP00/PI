@@ -18,4 +18,12 @@ m.add_points_from_xy(
     add_legend=True,
     )
 
+m.add_heatmap(
+    cities,
+    latitude="latitude",
+    longitude="longitude",
+    name="Heat map",
+    radius=20,
+)
+
 m.to_streamlit(height=700)
