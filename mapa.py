@@ -2,7 +2,7 @@ import streamlit as st
 import leafmap.foliumap as leafmap
 
 
-st.title("Interactive Map")
+st.title("Mapa")
 
 col1, col2 = st.columns([4, 1])
 options = list(leafmap.basemaps.keys())
@@ -19,4 +19,4 @@ with col1:
         locate_control=True, latlon_control=True, draw_export=True, minimap_control=True
     )
     m.add_basemap(basemap)
-    m.to_streamlit(height=700)
+    m.to_streamlit(height=780, width = 1700)
