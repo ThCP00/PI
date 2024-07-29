@@ -7,7 +7,7 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 
-m = leafmap.Map(center=[-15.2, -48], zoom=10)
+m = leafmap.Map(center=[-15.3, -48], zoom=10)
 data = "https://raw.githubusercontent.com/ThCP00/PI/main/DB_FIRE_MIN.csv"
 df = pd.read_csv(data)
 m.add_points_from_xy(df, x="longitude", y="latitude")
