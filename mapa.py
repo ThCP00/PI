@@ -10,7 +10,7 @@ df = pd.DataFrame(
 st.mapO(df)
 
 m = leafmap.Map(center=[40, -100], zoom=4)
-cities = "https://raw.githubusercontent.com/ThCP00/PI/main/DB_FIRE_MIN.csv"
+cities = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
 
 m.add_points_from_xy(
     cities,
