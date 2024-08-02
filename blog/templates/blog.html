@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}
+Blog
+{% endblock %}
+{% block content %}
+<div align="center">
+<table>
+  <tr>
+    <th align="left">Comentario</th>
+    <th align="right">Data</th>
+  </tr>
+{% for i in comentarios %}
+  <tr>
+  <td align="left">{{i.comentario}}</td>
+  <td align="right">{{i.data}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+
+
+{% if user.is_authenticated %}
+
+<form method="post" action="{% url 'comentario' %}">
+  {% csrf_token %}
+<label for="comentario"> Deixe seu comentario:</label>
+<br>
+<input type="comentario" class="form-c" id="comentario" name="comentario" required>
+<br>
+<button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+</form>
+{% endif %}
+
+{% endblock %}
+

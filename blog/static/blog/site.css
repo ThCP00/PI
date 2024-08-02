@@ -1,28 +1,31 @@
 .navbar {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
     font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: rgb(255, 255, 255);
     padding: 8px 5px 8px 5px;
 }
 .navbar a {
     text-decoration: none;
     color: inherit;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
 }
 .navbar-brand {
     font-size: 1.6em;
     font-weight: 600;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
     margin-left: 50px;
+    border-style: solid;
+    border-color: rgb(14, 17, 23);
+    border-radius: 0.25rem;
 }
 .navbar-item {
     font-variant: small-caps;
     margin-left: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
 }
 .body-content {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
     color: rgb(255, 255, 255);
     margin: 50px;
     text-align: center;
@@ -30,7 +33,7 @@
     align-self:center;
     align-content: center;
     padding: 5px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:"Source Sans Pro", sans-serif;
 }
 
 .light{
@@ -39,7 +42,7 @@
 }
 
 .navbar-right{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 17, 23);
     color: rgb(255, 255, 255);
     text-align: right;
     align-items: right;
