@@ -38,8 +38,7 @@ def make_heatmap(input_df, input_y, input_x):
     return heatmap
 
 
-choropleth = make_choropleth(df, 'states_code', 'population', selected_color_theme)
-st.plotly_chart(choropleth, use_container_width=True)
+
 
 heatmap = make_heatmap(df, 'Ano', 'Mês')
 st.altair_chart(heatmap, use_container_width=True)
