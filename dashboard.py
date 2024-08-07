@@ -38,7 +38,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
     choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="USA-states",
                                color_continuous_scale=input_color_theme,
-                               range_color=(0, max(df_selected_year.population)),
+                               range_color=(0, max(df_selection.Ano)),
                                scope="usa",
                                labels={'population':'Population'}
                               )
