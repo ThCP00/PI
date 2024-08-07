@@ -14,9 +14,6 @@ def make_heatmap(input_df, input_y, input_x):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
             x=alt.X(f'{input_x}:O', axis=alt.Axis(title="Mes", titleFontSize=18, titlePadding=15, titleFontWeight=900)),
-            color=alt.Color(f'max({input_color}):Q',
-                             legend=None,
-                             scale=alt.Scale(scheme=input_color_theme)),
             stroke=alt.value('black'),
             strokeWidth=alt.value(0.25),
         ).properties(width=900
@@ -38,6 +35,6 @@ df_selection = df.query(
 )
 df = df_selection
 
-heatmap = make_heatmap(df, 'Ano', 'Mês')
+heatmap = make_heatmap(df_selection, 'Ano', 'Mês')
 st.altair_chart(heatmap, use_container_width=True)
 st.dataframe(df_selection)
