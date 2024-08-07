@@ -7,6 +7,7 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 options = list(leafmap.basemaps.keys()) 
+index = options.index("OpenTopoMap")
 basemap = st.selectbox("Select a basemap:", options, index)
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
