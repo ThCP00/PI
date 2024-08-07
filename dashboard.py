@@ -10,6 +10,16 @@ st.set_page_config(
 )
 df = pd.read_excel("DB_FIRE.xlsx")
 
+with st.sidebar:
+    st.sidebar.header("Filtros")
+    color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
+    selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
+    anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
+    mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
+    df_selection = df.query(
+        "Ano == @anos & Mês == @mes"
+    )
+
 def make_heatmap(input_df, input_y, input_x):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
