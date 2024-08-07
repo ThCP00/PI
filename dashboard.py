@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import altair as alt
+import plotly.express as px
 
 st.set_page_config(
     page_title="Dashboard",
@@ -7,8 +9,11 @@ st.set_page_config(
     page_icon=":bar_chart: "
 )
 df = pd.read_excel("DB_FIRE.xlsx")
-lat = df["latitude"]
-long = df["longitude"]
+
+
+
+
+
 
 st.sidebar.header("Filtros")
 anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
