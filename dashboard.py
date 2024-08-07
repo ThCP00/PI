@@ -23,7 +23,7 @@ def make_heatmap(input_df, input_y, input_x):
         ) 
     # height=300
     return heatmap
-def make_choropleth(input_df, input_id, input_column, input_color_theme):
+def make_choropleth(input_df, input_id, input_column):
     choropleth = px.choropleth(input_df, locations=input_id, locationmode="Brazil-DF",
                                range_color=(0, max(df_selected_year.population)),
                                scope="brazil",
