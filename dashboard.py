@@ -38,9 +38,7 @@ def make_heatmap(input_df, input_y, input_x):
     return heatmap
 
 
-
-
-heatmap = make_heatmap(df, 'Ano', 'Mês')
+heatmap = make_heatmap(df_selection, 'Ano', 'Mês')
 st.altair_chart(heatmap, use_container_width=True)
 
 st.dataframe(df_selection)
