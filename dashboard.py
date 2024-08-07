@@ -47,7 +47,7 @@ mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
     "Ano == @anos & Mês == @mes"
 )
-choropleth = make_choropleth(df_selected_year, 'states_code', 'population', selected_color_theme)
+choropleth = make_choropleth(df, 'states_code', 'population', selected_color_theme)
 st.plotly_chart(choropleth, use_container_width=True)
 
 heatmap = make_heatmap(df, 'Ano', 'Mês')
