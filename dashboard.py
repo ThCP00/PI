@@ -39,7 +39,7 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
     choropleth = px.choropleth(input_df, locations = input_id, color=input_column, locationmode="country names",
                                color_continuous_scale=input_color_theme,
                                range_color=(0, max(df_selection.Ano)),
-                               scope="",
+                               scope="Brazil",
                                labels={'population':'Population'}
                               )
     choropleth.update_layout(
