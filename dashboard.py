@@ -38,6 +38,6 @@ df_selection = df.query(
 )
 df = df_selection
 
-heatmap = make_heatmap(df, 'Ano', 'Mês', 'population', selected_color_theme)
+heatmap = make_heatmap(df, 'Ano', 'Mês')
 st.altair_chart(heatmap, use_container_width=True)
 st.dataframe(df_selection)
