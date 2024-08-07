@@ -24,8 +24,7 @@ def make_heatmap(input_df, input_y, input_x):
     # height=300
     return heatmap
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
-    choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="Brazil-DF",
-                               color_continuous_scale=input_color_theme,
+    choropleth = px.choropleth(input_df, locations=input_id, locationmode="Brazil-DF",
                                range_color=(0, max(df_selected_year.population)),
                                scope="brazil",
                                labels={'population':'Population'}
@@ -47,7 +46,7 @@ mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
     "Ano == @anos & Mês == @mes"
 )
-choropleth = make_choropleth(df, 'states_code', 'population', selected_color_theme)
+choropleth = make_choropleth(df, 'states_code', 'population')
 st.plotly_chart(choropleth, use_container_width=True)
 
 heatmap = make_heatmap(df, 'Ano', 'Mês')
