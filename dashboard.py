@@ -20,7 +20,7 @@ with st.sidebar:
         "Ano == @anos & Mês == @mes"
     )
 
-def make_heatmap(input_df, input_y, input_x):
+def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
             x=alt.X(f'{input_x}:O', axis=alt.Axis(title="Mes", titleFontSize=18, titlePadding=15, titleFontWeight=900)),
@@ -38,7 +38,7 @@ def make_heatmap(input_df, input_y, input_x):
     return heatmap
 
 
-heatmap = make_heatmap(df_selection, 'anos', 'mes')
+heatmap = make_heatmap(df_selection, 'anos', 'mes', selected_color_theme)
 st.altair_chart(heatmap, use_container_width=True)
 
 st.dataframe(df_selection)
