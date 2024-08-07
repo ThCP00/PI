@@ -37,10 +37,10 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     return heatmap
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
     locations = ["Brazil"],
-    choropleth = px.choropleth(input_df, locations = ["Brazil"], color=input_column, locationmode="country names",
+    choropleth = px.choropleth(input_df, locations = input_id, color=input_column, locationmode="country names",
                                color_continuous_scale=input_color_theme,
                                range_color=(0, max(df_selection.Ano)),
-                               scope="brazil",
+                               scope="usa",
                                labels={'population':'Population'}
                               )
     choropleth.update_layout(
@@ -52,7 +52,7 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
     )
     return choropleth
 
-choropleth = make_choropleth(df_selection, 'Ano', 'Mês', selected_color_theme)
+choropleth = make_choropleth(df_selection, 'Ano', 'Pais', selected_color_theme)
 st.plotly_chart(choropleth, use_container_width=True)
 
 heatmap = make_heatmap(df, 'Ano', 'Mês', 'Dia', selected_color_theme)
