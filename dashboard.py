@@ -45,6 +45,7 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
 
 
 st.sidebar.header("Filtros")
+color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
 anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
 mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
