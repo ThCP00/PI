@@ -33,7 +33,7 @@ mes = st.sidebar.selectbox("Selecione o mês", df["Mês"].unique())
 df_selection = df.query(
     "Ano == @anos & Mês == @mes"
 )
-df = df_selection
+
 
 heatmap = make_heatmap(df, 'Ano', 'Mês')
 st.altair_chart(heatmap, use_container_width=True)
