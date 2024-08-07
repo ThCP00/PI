@@ -10,7 +10,7 @@ st.set_page_config(
 )
 df = pd.read_excel("DB_FIRE.xlsx")
 
-def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
+def make_heatmap(input_df, input_y, input_x):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
             x=alt.X(f'{input_x}:O', axis=alt.Axis(title="Mes", titleFontSize=18, titlePadding=15, titleFontWeight=900)),
