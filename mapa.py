@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import leafmap.foliumap as leafmap
 import geopandas as gpd
-from utils.plots import line_plot, bar_plot
-from utils.style import set_background
 
 st.set_page_config(layout="wide")
 
@@ -20,5 +18,5 @@ m.add_basemap(basemap)
 m.to_streamlit(height=700)
 
 d= pd.read_csv('Data/inmet_inpe.csv')
-st.plotly_chart(line_plot(d, 'Data Medição', 'Frequência de incêndios',
-                    'Frequência de incêndios em Brasília - 1998 a 2022', 'red'), use_container_width=True)
+st.plotly_chart(d, 'Data Medição', 'Frequência de incêndios',
+                    'Frequência de incêndios em Brasília - 1998 a 2022', 'red')
