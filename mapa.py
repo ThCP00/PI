@@ -13,7 +13,6 @@ basemap = st.selectbox("Selecione o tipo de mapa:", options, index)
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/geomap.csv"
 df = pd.read_csv(data)
-m.add_points_from_xy(df, x="longitude", y="latitude")
 
 m.add_basemap(basemap)
 
