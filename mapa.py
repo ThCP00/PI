@@ -15,8 +15,8 @@ m.to_streamlit(height=600)
 
 
 df = gpd.read_file('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/geojs-DF.json')
-df['lon'] = df.geometry.0  # extract longitude from geometry
-df['lat'] = df.geometry.1  # extract latitude from geometry
+df['lon'] = df.geometry.x  # extract longitude from geometry
+df['lat'] = df.geometry.y  # extract latitude from geometry
 df = df[['lon','lat']]     # only keep longitude and latitude
 st.write(df.head())        # show on table for testing only
 st.map(df)                 # show on map
