@@ -11,4 +11,4 @@ data = "https://raw.githubusercontent.com/ThCP00/PI/main/DB_FIRE_MIN.csv"
 df = pd.read_csv(data)
 m.add_points_from_xy(df, x="longitude", y="latitude")
 
-m.to_streamlit(height=700)
+m.to_streamlit(height=600)
