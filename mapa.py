@@ -17,5 +17,5 @@ m.add_basemap(basemap)
 
 m.to_streamlit(height=700)
 
-d= pd.read_csv('Data/inmet_inpe.csv')
+d= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
 st.bar_chart(d, x=ano, y=frenquencia_incendios,x_label=Ano, y_label=Frequencia)
