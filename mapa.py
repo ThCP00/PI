@@ -11,7 +11,7 @@ index = options.index("OpenTopoMap")
 basemap = st.selectbox("Selecione o tipo de mapa:", options, index)
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/geomap.csv"
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 df = pd.read_csv(data)
 
 m.add_basemap(basemap)
