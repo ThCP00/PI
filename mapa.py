@@ -18,5 +18,4 @@ m.add_basemap(basemap)
 m.to_streamlit(height=700)
 
 d= pd.read_csv('Data/inmet_inpe.csv')
-st.plotly_chart(d, 'Data Medição', 'Frequência de incêndios',
-                    'Frequência de incêndios em Brasília - 1998 a 2022', 'red')
+st.bar_chart(d, x=ano, y=frenquencia_incendios,x_label=Ano, y_label=Frequencia)
