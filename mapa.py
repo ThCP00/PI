@@ -19,4 +19,5 @@ m.to_streamlit(height=700)
 
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
 st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
-st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios').reset_index())
+st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios').reset_index(), 'Mês', 'Frequência de incêndios',
+                    'Quantidade de incêndios por mês em Brasília - 1998 a 2022', 'Frequência de incêndios', 'oranges'), use_container_width=True)
