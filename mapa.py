@@ -3,7 +3,7 @@ import pandas as pd
 import leafmap.foliumap as leafmap
 import geopandas as gpd
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_icon='🔥', page_title='Calango'.layout="wide")
 
 options = list(leafmap.basemaps.keys()) 
 index = options.index("OpenTopoMap")
