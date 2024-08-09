@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import leafmap.foliumap as leafmap
 import geopandas as gpd
-from utils.plots import line_plot, bar_plot
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
@@ -19,4 +18,4 @@ m.add_basemap(basemap)
 m.to_streamlit(height=700)
 
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
-st.plotly_chart(bar_plot(df.groupby('ano').sum('frequencia_incendios')))
+st.plotly_chart(df.groupby('ano').sum('frequencia_incendios'))
