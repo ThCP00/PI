@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide",
     page_icon=":bar_chart: "
 )
-df = pd.read_excel("DB_FIRE.xlsx")
+df = pd.read_excel("https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE.xlsx")
 
 with st.sidebar:
     st.sidebar.header("Filtros")
