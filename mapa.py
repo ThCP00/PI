@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import leafmap.foliumap as leafmap
 import geopandas as gpd
+from utils.plots import line_plot, bar_plot
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
