@@ -5,9 +5,6 @@ import geopandas as gpd
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
-options = list(leafmap.basemaps.keys()) 
-index = options.index("OpenTopoMap")
-basemap = st.selectbox("Selecione o tipo de mapa:", options, index)
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/ADM_DF.csv"
