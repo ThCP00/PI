@@ -11,21 +11,16 @@ st.set_page_config(
     page_title="Dashboard",
     layout="wide",
 )
-df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
+df = pd.read_excel("https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE.xlsx")
 
 with st.sidebar:
     st.sidebar.header("Filtros")
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
-    anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
+    anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
     df_selection = df.query(
         "Ano == @ano"
     )
-st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
-st.bar_chart(df, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
-st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios'))
-
-df = pd.read_excel("https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE.xlsx")
 def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
