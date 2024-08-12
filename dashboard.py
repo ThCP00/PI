@@ -19,7 +19,7 @@ with st.sidebar:
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
     anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
     df_selection = df.query(
-        "ano == @ano"
+        "Ano == @ano"
     )
 st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 st.bar_chart(df, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
