@@ -7,11 +7,11 @@ st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/Area_de_Protecao_Ambiental.csv"
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 df = gpd.read_file(data)
-df['lon'] = df.st_area.x
-df['lat'] = df.st_area.y
-st.map(df)
-m.add_points_from_xy(df, x="lon", y="lat")
+df = df[['longitude','latitude']] 
+m.add_points_from_xy(df, x="longitude", y="latitude")
+m.add_basemap(basemap)
+
 m.to_streamlit(height=700)
 
