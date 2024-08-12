@@ -8,3 +8,4 @@ geopandas
 leafmap
 plot-utils
 basedosdados
+matplotlib
