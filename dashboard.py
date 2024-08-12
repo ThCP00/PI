@@ -19,7 +19,7 @@ with st.sidebar:
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
     anos = st.sidebar.selectbox("Selecione o ano:", df["Ano"].unique())
     df_selection = df.query(
-        "Ano == @ano"
+        "Ano == @anos"
     )
 def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     heatmap = alt.Chart(input_df).mark_rect().encode(
