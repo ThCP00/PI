@@ -2,8 +2,12 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
+import leafmap.foliumap as leafmap
+import geopandas as gpd
+
 
 st.set_page_config(
+    page_icon='📈',
     page_title="Dashboard",
     layout="wide",
     page_icon=":bar_chart: "
@@ -56,5 +60,10 @@ st.plotly_chart(choropleth, use_container_width=True)
 
 heatmap = make_heatmap(df, 'Ano', 'Mês', 'Dia', selected_color_theme)
 st.altair_chart(heatmap, use_container_width=True)
+
+df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
+st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
+st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios').reset_index())
+
 
 st.dataframe(df_selection)
