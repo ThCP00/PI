@@ -65,4 +65,5 @@ st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Inc√
 st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios').reset_index())
 
 
-st.dataframe(df_selection)
+st.dataframe(df_selection)]
+st.dataframe(df)
