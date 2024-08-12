@@ -57,7 +57,7 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
 choropleth = make_choropleth(df_selection, 'Ano', 'Mês', selected_color_theme)
 st.plotly_chart(choropleth, use_container_width=True)
 
-heatmap = make_heatmap(df, 'Ano', 'Mês', 'Dia', selected_color_theme)
+heatmap = make_heatmap(df, 'Ano', 'Mês', selected_color_theme)
 st.altair_chart(heatmap, use_container_width=True)
 
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
