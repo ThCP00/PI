@@ -10,10 +10,12 @@ Blog
     <th align="right">Data</th>
   </tr>
 {% for i in comentarios %}
+  {% if i.ativo %}
   <tr>
   <td align="left">{{i.comentario}}</td>
   <td align="right">{{i.data}}</td>
   </tr>
+  {%endif%}
 {%endfor%}
 </table>
 
