@@ -54,7 +54,7 @@ def make_choropleth(input_df, input_id, input_column, input_color_theme):
     )
     return choropleth
 
-choropleth = make_choropleth(df_selection, 'Ano', 'Mês', selected_color_theme)
+choropleth = make_choropleth(df_selection, 'Ano', 'Mês', 'Dia', selected_color_theme)
 st.plotly_chart(choropleth, use_container_width=True)
 
 heatmap = make_heatmap(df, 'Ano', 'Mês', selected_color_theme)
