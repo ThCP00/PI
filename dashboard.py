@@ -21,6 +21,7 @@ with st.sidebar:
     df_selection = df.query(
         "Ano == @anos"
     )
+
 def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     heatmap = alt.Chart(input_df).mark_rect().encode(
             y=alt.Y(f'{input_y}:O', axis=alt.Axis(title="Ano", titleFontSize=18, titlePadding=15, titleFontWeight=900, labelAngle=0)),
