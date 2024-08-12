@@ -10,7 +10,6 @@ st.set_page_config(
     page_icon='📈',
     page_title="Dashboard",
     layout="wide",
-    page_icon=":bar_chart: "
 )
 df = pd.read_excel("https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE.xlsx")
 
