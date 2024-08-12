@@ -11,7 +11,7 @@ data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 df = gpd.read_file(data)
 df = df[['longitude','latitude']] 
 m.add_points_from_xy(df, x="longitude", y="latitude")
-m.add_basemap(basemap)
+
 
 m.to_streamlit(height=700)
 
