@@ -11,7 +11,6 @@ data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/Area_de_Protecao_
 df = gpd.read_file(data)
 df['lon'] = df.['geometry'].x
 df['lat'] = df.['geometry'].y
-[]
 df = df[['lon','lat']]
 st.map(df)
 m.add_points_from_xy(df, x="lon", y="lat")
