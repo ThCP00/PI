@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import geopandas as gpd
-
+import altair as alt
 
 st.set_page_config(
     page_icon='📈',
