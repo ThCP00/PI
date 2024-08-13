@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import leafmap.foliumap as leafmap
 import geopandas as gpd
 
 
