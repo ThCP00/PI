@@ -8,3 +8,4 @@ leafmap
 plot-utils
 basedosdados
 matplotlib
+altair
