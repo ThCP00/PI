@@ -63,7 +63,7 @@ anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
 df_selection = df.query(
         "ano == @anos")
 st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
-st.bar_chart(df, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
+st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios'))
 
 
