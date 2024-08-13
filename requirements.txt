@@ -6,6 +6,5 @@ plotly
 geopandas
 leafmap
 plot-utils
-basedosdados
 matplotlib
 altair
