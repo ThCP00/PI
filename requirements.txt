@@ -2,7 +2,6 @@ django
 pandas
 streamlit
 openpyxl
-altair
 plotly
 geopandas
 leafmap
