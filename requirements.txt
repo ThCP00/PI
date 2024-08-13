@@ -9,4 +9,3 @@ leafmap
 plot-utils
 basedosdados
 matplotlib
-geobr
