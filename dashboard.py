@@ -59,6 +59,9 @@ heatmap = make_heatmap(df_selection, 'Ano', 'Mês', 'Dia', selected_color_theme)
 st.altair_chart(heatmap, use_container_width=True)
 
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
+anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
+df_selection = df.query(
+        "ano == @anos"
 st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 st.bar_chart(df, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 st.bar_chart(df.groupby('mes_numero', sort=False).sum('frequencia_incendios'))
