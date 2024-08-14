@@ -9,6 +9,5 @@ m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 data = "DADOS/DF_Municipios_2022.shp"
 df = gpd.read_file(data)
 
-
-m.to_streamlit(height=700)
+st.dataframe(df)
 
