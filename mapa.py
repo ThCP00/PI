@@ -7,6 +7,12 @@ st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-data ="DADOS/DF_RG_Intermediarias_2022.shp"
-m.add_shp("DADOS/DF_RG_Intermediarias_2022.shp")
+regiao ="DADOS/DF_RG_Intermediarias_2022.shp"]
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
+df = gpd.read_file(data)
+df = df[['DataHora','longitude','latitude','Satelite']]
+m.add_points_from_xy(df,
+                     x="longitude",
+                     y="latitude")
+m.add_shp(regiao)
 m.to_streamlit(height=700)
