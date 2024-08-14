@@ -8,3 +8,4 @@ leafmap
 plot-utils
 matplotlib
 altair
+descartes
