@@ -11,12 +11,7 @@ data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 regiao ="DADOS/DF_Municipios_2022.shp"
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-m.add_heatmap(data,
-              latitude="latitude",
-              longitude="longitude",
-              value="DataHora",
-              name="Heat map",
-              radius=20,)
+
 m.add_shp(regiao)
 df = gpd.read_file(data)
 df = df[['DataHora','longitude','latitude','Satelite']]
