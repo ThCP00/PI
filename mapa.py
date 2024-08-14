@@ -16,5 +16,5 @@ df = df[['DataHora','longitude','latitude','Satelite']]
 m.add_points_from_xy(df,
                      x="longitude",
                      y="latitude")
-m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
+m.split_map(left_layer='ROADMAP', right_layer='SATELLITE')
 m.to_streamlit(height=800)
