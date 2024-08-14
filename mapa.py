@@ -15,4 +15,8 @@ df = df[['DataHora','longitude','latitude','Satelite']]
 m.add_points_from_xy(df,
                      x="longitude",
                      y="latitude")
+m.add_heatmap(df,
+              latitude="latitude",
+              longitude="longitude",
+              value="DataHora",)
 m.to_streamlit(height=700)
