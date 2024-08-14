@@ -20,4 +20,3 @@ m.add_points_from_xy(df,
                      x="longitude",
                      y="latitude")
 
-m.to_streamlit(height=700)
