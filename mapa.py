@@ -11,7 +11,6 @@ df = pd.read_csv(data)
 df = df[['DataHora','longitude','latitude','Satelite']]
 m.add_points_from_xy(df,
                      x="longitude",
-                     y="latitude",
-                    color_column="regiao")
+                     y="latitude")
 m.to_streamlit(height=700)
 
