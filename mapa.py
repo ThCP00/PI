@@ -12,7 +12,7 @@ data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 regiao = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/ADM_DF.csv"
 df = gpd.read_file(data)
 df = df[['DataHora','longitude','latitude','Satelite']]
-m.add_geojson(regions, layer_name="Regiões administrativas")
+m.add_json(regions, layer_name="Regiões administrativas")
 m.add_points_from_xy(df,
                      x="longitude",
                      y="latitude",
