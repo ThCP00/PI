@@ -9,3 +9,4 @@ plot-utils
 matplotlib
 altair
 descartes
+folium
