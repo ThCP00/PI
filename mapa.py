@@ -19,7 +19,7 @@ m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
 tab1, tab2 = st.tabs(["Regioes Administrativas","Area de Proteção"])
 with tab1:
   m.add_shp(adm)
-  m.to_streamlit(height=800)
 with tab2:
   m.add_shp(area_protec)
-  m.to_streamlit(height=800)
+
+m.to_streamlit(height=800)
