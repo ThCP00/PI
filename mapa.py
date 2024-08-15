@@ -6,12 +6,14 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
-data = "DADOS/DB_FIRE_MIN.csv"
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 adm = "DADOS/sdia_ra_2022.shp"
 area_protec = "DADOS/Area_de_Protecao_Ambiental.shp"
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 df = gpd.read_file(data)
-m.add_points_from_xy(df, x="latitude", y="longitude")
+m.add_points_from_xy(df,
+                     x="latitude",
+                     y="longitude")
 m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
 m.add_shp(adm)
 m.to_streamlit(height=800)
