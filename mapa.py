@@ -3,7 +3,7 @@ import pandas as pd
 import leafmap.foliumap as leafmap
 import geopandas as gpd
 import matplotlib.pyplot as plt
-
+import folium
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
 data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
