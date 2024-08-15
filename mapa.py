@@ -14,17 +14,12 @@ df = df[['DataHora','longitude','latitude','Satelite']]
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 m.add_shp(adm)
-
-left_layer=folium.WmsTileLayer(
-    url=data,
-    layers="ROADMAP",
-    name="left",
-    m.add_points_from_xy(df,
+    
+m.add_points_from_xy(df,
                      x="longitude",
-                     y="latitude"))
+                     y="latitude")
 
 
 
-
-m.split_map(left_layer, right_layer='SATELLITE')
+m.split_map(left_layer='ROADMAP', right_layer='SATELLITE')
 m.to_streamlit(height=800)
