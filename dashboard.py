@@ -8,6 +8,7 @@ st.set_page_config(
     page_icon='📈',
     page_title="Dashboard",
     layout="wide",
+    initial_sidebar_state="collapsed"
 )
 tab1, tab2 = st.tabs(["Ano","Mes"])
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
