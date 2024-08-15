@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
-data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/INPE_20_24.csv"
+data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
 adm = "DADOS/sdia_ra_2022.shp"
 area_protec = "DADOS/Area_de_Protecao_Ambiental.shp"
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
