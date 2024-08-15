@@ -13,12 +13,13 @@ m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 left_layer=folium.WmsTileLayer(
     url=data,
     layers="ROADMAP",
-    name="left",)
+    name="left",
+    m.add_points_from_xy(df,
+                     x="longitude",
+                     y="latitude"))
 m.add_shp(adm)
 df = gpd.read_file(data)
 df = df[['DataHora','longitude','latitude','Satelite']]
-m.add_points_from_xy(df,
-                     x="longitude",
-                     y="latitude")
+
 m.split_map(left_layer, right_layer='SATELLITE')
 m.to_streamlit(height=800)
