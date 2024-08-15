@@ -11,7 +11,6 @@ regiao ="DADOS/DF_Municipios_2022.shp"
 adm = "DADOS/sdia_ra_2022.shp"
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-adm = adm[['ra_nome']]
 m.add_shp(adm)
 df = gpd.read_file(data)
 df = df[['DataHora','longitude','latitude','Satelite']]
