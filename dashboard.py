@@ -9,11 +9,13 @@ st.set_page_config(
     page_title="Dashboard",
     layout="wide",
 )
-
+tab1, tab2 = st.tabs(["Ano","Mes"])
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
 anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
 df_selection = df.query(
         "ano == @anos")
-st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
-st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios por ano', color="#ffffff", horizontal=False, stack='layered')
+with tab1:
+    st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
+with tab2:
+    st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios por ano', color="#ffffff", horizontal=False, stack='layered')
 st.dataframe(df_selection)
