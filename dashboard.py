@@ -18,5 +18,5 @@ df_selection = df.query(
 with tab1:
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 with tab2:
-    st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios por ano', color="#ffffff", horizontal=False, stack='layered')
+    st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="#ffffff", horizontal=False, stack='layered')
 st.dataframe(df_selection)
