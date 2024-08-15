@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
 
 data = "https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/DB_FIRE_MIN.csv"
-regiao ="DADOS/DF_Municipios_2022.shp"
 adm = "DADOS/sdia_ra_2022.shp"
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
