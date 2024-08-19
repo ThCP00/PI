@@ -21,4 +21,4 @@ df_selection = df.query(
 with tab1:
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
 with tab2:
-    st.bar_chart(df_selection.groupby('mes'. sort=False).sum('frequencia_incendios').reset_index()
+    st.bar_chart(df_selection.groupby('mes', sort=False).sum('frequencia_incendios').reset_index()
