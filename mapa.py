@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import leafmap.leafmap as leafmap
+import leafmap.folium as leafmap
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
