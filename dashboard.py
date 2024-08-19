@@ -20,6 +20,6 @@ df_selection = df.query(
 
 with tab1:
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-    st.area_chart(df, x="ano", y="frequencia_incendios", color="rgb(255, 75, 75)", stack="center")
+    st.area_chart(df, x="ano", y="frequencia_incendios", color="rgb(255, 75, 75)")
 with tab2:
     st.bar_chart(df_selection, x='mes', y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
