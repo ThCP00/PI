@@ -9,5 +9,5 @@ plot-utils
 matplotlib
 altair
 descartes
-utils.plots
+utils-plots
 
