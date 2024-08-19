@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import geopandas as gpd
 import altair as alt
-from utils.plots import line_plot, bar_plot
+from plot-utils import line_plot, bar_plot
 
 st.set_page_config(
     page_icon='📈',
