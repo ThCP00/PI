@@ -13,8 +13,7 @@ m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 df = pd.read_csv(data)
 m.add_heatmap(df,
               x="Longitude",
-              y="Latitude",
-             value="id")
+              y="Latitude")
 m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
 m.add_shp(adm)
 m.to_streamlit(height=800)
