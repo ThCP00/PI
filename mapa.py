@@ -5,8 +5,6 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide")
-st.markdown("<h2 style='text-align: center; color: white;'> Visualização das séries históricas </h2>",
-            unsafe_allow_html=True)
 
 data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
