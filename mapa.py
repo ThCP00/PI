@@ -10,6 +10,7 @@ data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
 style= {
     "color": "#ff4b4b",
+    "fillColor": "#0000ff",
 }
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
