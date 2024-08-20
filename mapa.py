@@ -8,13 +8,9 @@ st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide", initia
 
 data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
-dft= pd.read_csv('DADOS/inmet_inpe.csv')
 anos = st.sidebar.selectbox("Selecione o ano:", dft["ano"].unique())
-df_selection = dft.query(
+df_selection = df.query(
         "ano == @anos")
-st.bar_chart(dft, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-st.bar_chart(df_selection, x="mes", y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 df = pd.read_csv(data)
