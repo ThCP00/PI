@@ -15,7 +15,7 @@ df = pd.read_csv(data)
 anos = st.sidebar.selectbox("Selecione o ano:", df["DataHora"].unique())
 df_selection = df.query(
         "DataHora == @anos")
-m.add_points_from_xy(df,
+m.add_points_from_xy(df_selection,
               x="Longitude",
               y="Latitude")
 m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
