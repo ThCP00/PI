@@ -10,8 +10,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-st.markdown("<h2 style='text-align: center; color: white;'> Visualização das séries históricas </h2>",
-            unsafe_allow_html=True)
 tab1, tab2 = st.tabs(["Ano","Mes"])
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
 anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
