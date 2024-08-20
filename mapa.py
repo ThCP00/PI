@@ -16,6 +16,6 @@ m.add_points_from_xy(df,
               x="Longitude",
               y="Latitude")
 m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
-m.add_shp(adm, style="color":"rgb(255, 75, 75)")
+m.add_shp(adm, style="color"="rgb(255, 75, 75)")
 m.to_streamlit(height=800)
 
