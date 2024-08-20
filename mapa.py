@@ -12,10 +12,7 @@ adm = "DADOS/sdia_ra_2022.shp"
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 df = pd.read_csv(data)
-anos = st.sidebar.selectbox("Selecione o ano:", df["DataHora"].unique())
-df_selection = df.query(
-        "DataHora == @anos")
-m.add_points_from_xy(df_selection,
+m.add_points_from_xy(df,
               x="Longitude",
               y="Latitude")
 m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
