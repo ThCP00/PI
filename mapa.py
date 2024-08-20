@@ -8,7 +8,7 @@ st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide", initia
 
 data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
-dft= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
+dft= pd.read_csv('DADOS/inmet_inpe.csv')
 anos = st.sidebar.selectbox("Selecione o ano:", dft["ano"].unique())
 df_selection = dft.query(
         "ano == @anos")
