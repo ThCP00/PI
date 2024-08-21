@@ -20,7 +20,7 @@ df_selection = df.query(
 
 with tab1:
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-    st.line_chart(df, x="ano" , y="TEMPERATURA_MAXIMA_MEDIA", color="rgb(255, 75, 75)")
+    st.bar_chart(df, x="ano" , y="PRECIPITACAO", color="rgb(255, 75, 75)")
 
 with tab2:
    st.bar_chart(df_selection, x="mes", y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
