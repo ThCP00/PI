@@ -24,4 +24,4 @@ with tab1:
 
 with tab2:
    st.bar_chart(df_selection, x="mes_numero", y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-   st.bar_chart(df_selection, x="mes_numero" , y="PRECIPITACAO", stack='layered')
+   st.bar_chart(df_selection, x="mes_numero" , y="PRECIPITACAO", x_label='Mês', y_label='Precipitação',stack='layered')
