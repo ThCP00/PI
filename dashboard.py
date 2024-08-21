@@ -19,6 +19,8 @@ df_selection = df.query(
         "ano == @anos")
 
 with tab1:
+    st.markdown("<h2 style='text-align: center; color: white;'>Frequencia de Incêndios por Ano</h2>",
+            unsafe_allow_html=True)
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
     st.bar_chart(df, x="ano" , y="PRECIPITACAO",x_label='Ano', y_label='Precipitação', stack='layered')
     st.bar_chart(df, x="ano" , y="TEMPERATURA_MEDIA",x_label='Ano', y_label='Temperatura Média', stack='layered')
