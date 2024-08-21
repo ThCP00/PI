@@ -9,3 +9,4 @@ matplotlib
 altair
 descartes
 plot-utils
+plost
