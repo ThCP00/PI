@@ -16,7 +16,7 @@ df = pd.read_csv(data)
 df["DataHora"]=pd.to_datetime(df["DataHora"])
 anos = st.sidebar.selectbox("Selecione o ano:", df["DataHora"].unique())
 df_selection = df.query(
-        "year == @anos")
+        "DataHora == @anos")
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 
