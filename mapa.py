@@ -36,7 +36,7 @@ with tab1:
     m.to_streamlit(height=800)
 
 with tab2:
-    m.add_heatmap(df,
+    m.add_heatmap(data,
                   longitude="Longitude",
                   latitude="Latitude",
                  value="FRP")
