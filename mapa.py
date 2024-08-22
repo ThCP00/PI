@@ -5,6 +5,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide", initial_sidebar_state="collapsed")
+tab1, tab2 = st.tabs(["Pontos","Mapa de Calor"])
 col1, col2 = st.columns((2))
 data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
