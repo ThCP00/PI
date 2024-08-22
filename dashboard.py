@@ -24,8 +24,7 @@ with tab1:
         fig=px.pie(df, values='frequencia_incendios', names='ano')
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
     with c2:
-        fig=px.scatter(df_selection, x="ano", y='frequencia_incendios')
-        fig.update_layout(scattermode="group", scattergap=1)
+        fig=px.line(df_selection, x="ano", y='frequencia_incendios')
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
 
 with tab2:
@@ -36,5 +35,5 @@ with tab2:
        fig=px.pie(df_selection, values='frequencia_incendios', names='mes')
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
    with c2:
-       fig=px.scatter(df_selection, x="mes_numero", y='frequencia_incendios')
+       fig=px.line(df_selection, x="mes_numero", y='frequencia_incendios')
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
