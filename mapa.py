@@ -36,9 +36,7 @@ with tab1:
     m.to_streamlit(height=800)
 
 with tab2:
-    m.add_heatmap(data,
-                  longitude="Longitude",
-                  latitude="Latitude",
-                 value="FRP")
-    m.to_streamlit(height=800)
+    fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='FRP', radius=10,
+                        center=dict(lat=-15.7, lon=-47.7), zoom=0,
+                        mapbox_style="open-street-map")
 
