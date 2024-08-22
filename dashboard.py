@@ -10,8 +10,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-c1, c2 = st.columns((5,5))
 tab1, tab2 = st.tabs(["Ano","Mes"])
+c1, c2 = st.columns((5,5))
 df= pd.read_csv('https://raw.githubusercontent.com/ThCP00/PI/main/DADOS/inmet_inpe.csv')
 anos = st.sidebar.selectbox("Selecione o ano:", df["ano"].unique())
 df_selection = df.query(
