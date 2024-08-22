@@ -27,10 +27,14 @@ df = df[(df["DataHora"]>=data1) & (df["DataHora"]<=data2)].copy()
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 
-m.add_points_from_xy(df,
-              x="Longitude",
-              y="Latitude")
-m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
-m.add_shp(adm, style=style)
-m.to_streamlit(height=800)
+with tab1:
+    m.add_points_from_xy(df,
+                  x="Longitude",
+                  y="Latitude")
+    m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
+    m.add_shp(adm, style=style)
+    m.to_streamlit(height=800)
 
+with tab2:
+    fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='FRP')
+    st.plotly_chart(fig, use_container_width=True)
