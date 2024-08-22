@@ -25,7 +25,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
     with c2:
         fig=px.scatter(df_selection, x="ano", y='frequencia_incendios')
-        fig.update_layout(scattermode="group", scattergap=0.75)
+        fig.update_layout(scattermode="group", scattergap=1)
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
 
 with tab2:
