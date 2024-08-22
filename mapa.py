@@ -19,9 +19,9 @@ inicio = pd.to_datetime(df["DataHora"]).min()
 final = pd.to_datetime(df["DataHora"]).max()
 
 with col1:
-    data1= pd.to_datetime(st.data_input("Data Inicio", inicio))
+    data1= pd.to_datetime(st.date_input("Data Inicio", inicio))
 with col2:
-    data2= pd.to_datetime(st.data_input("Data Final", final))
+    data2= pd.to_datetime(st.date_input("Data Final", final))
 df = df[(df["DataHora"]>=data1) & (df["DataHora"]<=data2)].copy()
 
 m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
