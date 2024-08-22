@@ -21,7 +21,7 @@ with tab1:
     st.markdown("<h3 style='text-align: center; color: white;'>Frequência de Incêndios por Ano</h3>",
             unsafe_allow_html=True)
     st.bar_chart(df, x='ano', y='frequencia_incendios', x_label='Ano', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
-    fig=px.bar(df, x='ano', y='frequencia_incendios')
+    fig=px.pie(df, values='frequencia_incendios', names='ano')
     st.plotly_chart(fig, use_container_width=True)
 
 with tab2:
