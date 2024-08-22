@@ -32,7 +32,7 @@ with tab2:
    st.bar_chart(df_selection, x="mes_numero", y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
    c1, c2 = st.columns((5,5))
    with c1:    
-       fig=px.pie(df_selection, values='frequencia_incendios', names='mes')
+       fig=px.pie(df_selection, values='frequencia_incendios', names='mes', color="mes")
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
    with c2:
        fig=px.line(df_selection, x="mes", y='frequencia_incendios', markers=True, color="mes")
