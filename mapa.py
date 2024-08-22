@@ -18,7 +18,7 @@ anos = st.sidebar.selectbox("Selecione o ano:", df["year"].unique())
 df_selection = df.query(
         "year == @anos")
 
-m = leafmap.Map(center=d-15.7, -47.7], zoom=10)
+m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 
 m.add_points_from_xy(df_selection,
               x="Longitude",
