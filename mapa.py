@@ -38,5 +38,5 @@ with tab1:
 with tab2:
     fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='FRP', radius=20,
                         center=dict(lat=-15.7, lon=-47.7), zoom=10,
-                        mapbox_style="open-street-map",height=800)
+                        mapbox_style="ROADMAP",height=800)
     st.plotly_chart(fig, use_container_width=True)
