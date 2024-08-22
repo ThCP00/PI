@@ -24,7 +24,7 @@ with tab1:
     with c1:
         fig=px.pie(df, values='frequencia_incendios', names='ano')
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
-    with c2
+    with c2:
         fig=px.scatter(df_selection, x="ano", y='frequencia_incendios')
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
 
