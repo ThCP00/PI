@@ -36,5 +36,9 @@ with tab1:
     m.to_streamlit(height=800)
 
 with tab2:
-    fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='FRP')
-    st.plotly_chart(fig, use_container_width=True)
+    m.add_heatmap(df,
+                  x="Longitude",
+                  y="Latitude",
+                 value="FRP")
+    m.to_streamlit(height=800)
+
