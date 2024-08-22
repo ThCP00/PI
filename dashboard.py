@@ -25,6 +25,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
     with c2:
         fig=px.line(df, x="Data Medicao", y='frequencia_incendios', color="ano")
+        fig.update_yaxes(showgrid=True)
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
 
 with tab2:
@@ -36,4 +37,5 @@ with tab2:
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
    with c2:
        fig=px.line(df_selection, x="mes", y='frequencia_incendios')
+       fig.update_yaxes(showgrid=True)
        st.plotly_chart(fig, use_container_width=True)
