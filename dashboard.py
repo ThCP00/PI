@@ -29,4 +29,4 @@ with tab2:
             unsafe_allow_html=True)
    st.bar_chart(df_selection, x="mes_numero", y='frequencia_incendios', x_label='Mês', y_label='Incêndios', color="rgb(255, 75, 75)", horizontal=False, stack='layered')
    fig=px.pie(df, values='frequencia_incendios', names='mes')
-   st.plotly_chart(fig, use_container_width=True)
+   st.plotly_chart(fig, use_container_width=True,theme="streamlit")
