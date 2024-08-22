@@ -25,9 +25,9 @@ with col2:
     data2= pd.to_datetime(st.date_input("Data Final", final))
 df = df[(df["DataHora"]>=data1) & (df["DataHora"]<=data2)].copy()
 
-m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
 
 with tab1:
+    m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
     m.add_points_from_xy(df,
                   x="Longitude",
                   y="Latitude")
@@ -38,5 +38,5 @@ with tab1:
 with tab2:
     fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='FRP', radius=20,
                         center=dict(lat=-15.7, lon=-47.7), zoom=10,
-                        mapbox_style="white-bg",height=800)
+                        mapbox_style="open-street-map",height=800)
     st.plotly_chart(fig, use_container_width=True)
