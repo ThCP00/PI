@@ -24,7 +24,7 @@ with tab1:
         fig=px.pie(df, values='frequencia_incendios', names='ano', color="ano")
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
     with c2:
-        fig=px.line(df, x="Data Medicao", y='frequencia_incendios', color="Data Medicao")
+        fig=px.line(df, x="Data Medicao", y='frequencia_incendios', color="ano")
         st.plotly_chart(fig, use_container_width=True,theme="streamlit")
 
 with tab2:
