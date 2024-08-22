@@ -5,7 +5,6 @@ import geopandas as gpd
 import plotly.express as px
 
 st.set_page_config(page_icon='🔥', page_title='Calango', layout="wide", initial_sidebar_state="collapsed")
-tab1, tab2 = st.tabs(["Pontos","Mapa de Calor"])
 col1, col2 = st.columns((2))
 data = "DADOS/INPE_20_24.csv"
 adm = "DADOS/sdia_ra_2022.shp"
@@ -25,13 +24,11 @@ with col2:
     data2= pd.to_datetime(st.date_input("Data Final", final))
 df = df[(df["DataHora"]>=data1) & (df["DataHora"]<=data2)].copy()
 
-
-with tab1:
-    m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
-    m.add_points_from_xy(df,
+m = leafmap.Map(center=[-15.7, -47.7], zoom=10)
+m.add_points_from_xy(df,
                   x="Longitude",
                   y="Latitude")
-    m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
-    m.add_shp(adm, style=style)
-    m.to_streamlit(height=800)
+m.split_map(left_layer='ROADMAP', right_layer='HYBRID')
+m.add_shp(adm, style=style)
+m.to_streamlit(height=800)
 
