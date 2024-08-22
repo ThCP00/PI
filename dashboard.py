@@ -35,5 +35,5 @@ with tab2:
        fig=px.pie(df_selection, values='frequencia_incendios', names='mes')
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
    with c2:
-       fig=px.line(df_selection, x="mes", y='frequencia_incendios', color='rgb(255, 75, 75)', markers=True)
+       fig=px.line(df_selection, x="mes", y='frequencia_incendios', color='red', markers=True)
        st.plotly_chart(fig, use_container_width=True,theme="streamlit")
