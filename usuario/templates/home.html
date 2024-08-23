@@ -3,9 +3,109 @@
 Home - Calango
 {% endblock %}
 {% block content %}
-<h1>Queimadas DF 2020/2024</h1>
-<div>
-<iframe align="center" src="https://4p47dwy6z7jtmv7yjkgcra.streamlit.app/?embed=true" width="1700" height="880"></iframe>
-</div>
-
+{% load static %}
+<head>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'><link rel="stylesheet" href="{% static 'blog/style.css'%}">
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="cont s--inactive">
+      <!-- cont inner start -->
+      <div class="cont__inner">
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading">Sobre Calango</h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Sobre Calango</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">1</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="1">1</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading">Cerrado</h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Cerrado</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">2</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="2">2</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading">Drone</h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Drone</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">3</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="3">3</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        
+      </div>
+      <!-- cont inner end -->
+    </div>
+      <!-- partial -->
+        <script  >var $cont = document.querySelector('.cont');
+            var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+            var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+            
+            setTimeout(function() {
+              $cont.classList.remove('s--inactive');
+            }, 200);
+            
+            $elsArr.forEach(function($el) {
+              $el.addEventListener('click', function() {
+                if (this.classList.contains('s--active')) return;
+                $cont.classList.add('s--el-active');
+                this.classList.add('s--active');
+              });
+            });
+            
+            $closeBtnsArr.forEach(function($btn) {
+              $btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                $cont.classList.remove('s--el-active');
+                document.querySelector('.el.s--active').classList.remove('s--active');
+              });
+            });</script>
+      
+      </body>
 {% endblock %}
